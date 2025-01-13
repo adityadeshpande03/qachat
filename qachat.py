@@ -4,8 +4,9 @@ load_dotenv() #loading all environment variables
 
 import streamlit as st
 import google.generativeai as genai
+import os
 
-genai.configure(api_key='AIzaSyAG-EHKTWa-jYIJgBdBcJ2Dx6P7RRfQpig') #setting the api key
+genai.configure(api_key=os.getenv('GOOGLE_API_KEY')) #setting the api key
 
 #loading the model
 
